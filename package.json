@@ -1,0 +1,19 @@
+{
+  "name": "nodejs3edition",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start":"node src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hugonn/nodejs3edition.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hugonn/nodejs3edition/issues"
+  },
+  "homepage": "https://github.com/hugonn/nodejs3edition#readme"
+}
