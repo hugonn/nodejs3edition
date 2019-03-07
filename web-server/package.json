@@ -1,0 +1,18 @@
+{
+  "name": "web-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start":"node src/app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "eval": "^0.1.2",
+    "express": "^4.16.4",
+    "handlebars": "^4.1.0",
+    "hbs": "^4.0.3",
+    "request": "^2.88.0"
+  }
+}
