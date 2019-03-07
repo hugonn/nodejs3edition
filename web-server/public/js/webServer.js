@@ -1,4 +1,3 @@
-import { URL } from "url";
 
 
 
@@ -18,12 +17,18 @@ fetch('http://localhost:3000/weather?address=porto%20alegre').then((response) =>
 
 const weatherForm = document.querySelector('form')
 const search = document.querySelector('input')
+const messageOne = document.querySelector('#message-one')
+const messageTwo = document.querySelector('#message-two')
 
+messageOne.textContent = '';
 weatherForm.addEventListener('submit', (e) => {
 
+    
     //not refresh de page, just execute this script
     e.preventDefault()
 
+    messageOne.textContent = 'Carregani...'
+    messageTwo.textContent = ''
     let location =  encodeURIComponent(search.value);
 
     fetch(`http://localhost:3000/weather?address=${location}`).then((response) => {
@@ -32,6 +37,8 @@ weatherForm.addEventListener('submit', (e) => {
             if(data.error){
                 console.log(data.error)
             }else{
+                messageOne.textContent = data.location
+                messageTwo.textContent = data.forecast
                 console.log(data.location)
                 console.log(data.forecast)
             }
