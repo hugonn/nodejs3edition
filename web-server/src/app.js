@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path')
 
+const port = process.env.PORT || 3000
 const app = express();
 const viewsPath = path.join(__dirname, '../templates/views');
 const publicPath = path.join(__dirname,'../public');
@@ -9,6 +10,9 @@ const hbs = require('hbs');
 
 const geocode = require('./utils/geocode');
 const forecast = require('./utils/forecast');
+
+// run the project automatically with heroku or NPM RUN
+
 
 
 app.set('view engine', 'hbs');
@@ -129,5 +133,7 @@ app.get('*', (req, res)=>{
 
 
 
-app.listen(3000);
-console.log("Server porta 3000");
+app.listen(port,() =>{
+    console.log(`Server porta ${port}`);
+});
+
